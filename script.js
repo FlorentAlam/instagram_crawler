@@ -1,3 +1,8 @@
 import InstaCrawler from './crawler.js';
 
-new InstaCrawler({username: "marshallheadphones"});
+async function createCrawler(){
+    const crawler = new InstaCrawler();
+    await crawler.fetchUserDatas("marshallheadphones")
+    const medias = crawler.medias;
+}
+createCrawler();
